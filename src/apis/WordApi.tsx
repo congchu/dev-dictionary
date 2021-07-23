@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://api.airtable.com/v0/appwmFCbYijvawIYO/Dictionary',
+    baseURL: process.env.REACT_APP_SERVER_API,
     timeout: 5000,
-    headers: { 'Authorization': 'Bearer keywlgmSjQ2ToUwTz' }
+    headers: { 'Authorization': `Bearer ${process.env.REACT_APP_SERVER_KEY}` }
 });
 
 
